@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/MainApp.css">
+    <title>User Registration</title>
+</head>
+<body >
+	<div flex="10" id="lenth">
+	<div ng-controller="AngController" layout="column" ng-cloak="" class="inputdemoErrors" ng-app="hospitalityApp" >
+		<md-whiteframe class="padded" md-whiteframe="24" layout layout-align="center center"><md-content layout-padding="" >
+			<form name="userRegistration" >
+				<md-toolbar class="md-hue-2" ><div class="md-toolbar-tools"><span>User Registration</span></div></md-toolbar>
+					<md-input-container class="md-block">
+						<label>Username</label>
+						<input md-maxlength="30" required="" md-no-asterisk="" name="username" ng-model="project.username">
+						<div ng-messages="userRegistration.username.$error">
+							<div ng-message="required">This is required.</div>
+							<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+						</div>
+					</md-input-container>
+					 <md-input-container class="md-block">
+						<label>User Email</label>
+						<input required="" type="email" name="userEmail" ng-model="project.userEmail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/">
+						<div ng-messages="userRegistration.userEmail.$error" role="alert">
+							<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+								 Your email must be between 10 and 100 characters long and look like an e-mail address.
+							</div>
+						</div>
+						<span style="color:red" ng-show="userRegistration.userEmail.$dirty && projectForm.userEmail.$invalid">
+							<span ng-show="userRegistration.userEmailuserEmail.$error.required">Email is required.</span>
+							<span ng-show="userRegistration.userEmail.$error.clientEmail">Invalid email address.</span>
+						 </span>
+					</md-input-container>
+					<md-input-container class="md-block">
+						<label>password</label>
+						<input type="password" required="" name="password" ng-model="project.password">
+						<div ng-messages="userRegistration.password.$error">
+							<div ng-message="required">Password is required.</div>
+						</div>
+					 </md-input-container>
+					<md-input-container class="md-block">
+						<label>Confirm password</label>
+						<input type="password" required="" name="confirmPassword" ng-model="project.confirmPassword">
+						<div ng-messages="userRegistration.confirmPassword.$error">
+							<div ng-message="required">Password is not confirmed required.</div>
+						</div>
+					</md-input-container>
+					<md-input-container class="md-block">
+						<md-button md-no-ink class="md-warn" ng-click="reset()" style="rgba(216,67,21,0.87)">&#10160; Reset </md-button>
+						<md-button md-no-ink class="md-primary" style="color: rgba(255,255,255,0.87)">&#10004; Create </md-button>
+					</md-input-container>
+			</form>
+		</md-content>
+	</div>
+	</div>
+
+
+<script>angular.module('hospitalityApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
+
+        .controller('AngController', function($scope) {
+            $scope.project = {
+                description: '',
+                rate: 500
+            };
+        });
+</script>
+<script>
+angular.module('whiteframeDirectiveUsage', ['ngMaterial']);
+</script>
+<script>
+<script>
+	var app = angular.module('hospitalityApp', []);
+		app.controller('AngController', function($scope) {
+		 $scope.master = {firstName:"John", lastName:"Doe"};
+		$scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+    };
+    $scope.reset();
+});
+</script>
+</body>
+</html>

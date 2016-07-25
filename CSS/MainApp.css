@@ -1,0 +1,76 @@
+ /*wasantha yapa 2016-07-23 */
+ md{
+		background-color:rgb(255,255,255); 
+		border-style: ridge; 
+		border-color:rgb(217, 242, 217); 
+		border-radius: 20px; 
+			border-width:2px;
+	}
+ p {
+
+            padding-top: 300px;
+			background-color:rgb(255,255,255);
+			
+    }
+  .inputdemoErrors .inputErrorsApp {
+            min-height: 48px; }
+
+  .inputdemoErrors md-input-container > p {
+            font-size: 0.8em;
+            text-align: left;
+            width: 100%;
+		
+	}		
+body{
+       background-color:rgb(255,255,255);
+       font-family: Arial,sans-serif;
+       font-size: 11px;
+       line-height: 1.5;
+}
+.md-button{
+       background-color: rgb(45,50,62);
+       font-size: 11px;
+       color: rgba(255,255,255,0.87)
+}
+.md-toolbar-tools{
+        background-color: rgb(45,50,62);
+}
+.whiteframedemoDirectiveAttributeUsage {
+  /* For breakpoint `-xs` */
+  /* For breakpoint `-sm` */
+  /* For breakpoint `-md` */
+  /* For breakpoint `-gt-md` */ }
+  .whiteframedemoDirectiveAttributeUsage md-whiteframe, .whiteframedemoDirectiveAttributeUsage div.padded {
+    background: #fff;
+    margin: 30px;
+    height: 100px; }
+  @media (max-width: 599px) {
+    .whiteframedemoDirectiveAttributeUsage md-whiteframe, .whiteframedemoDirectiveAttributeUsage div.padded {
+      margin: 7px;
+      height: 50px;
+      background-color: #c8e4fa; }
+    .whiteframedemoDirectiveAttributeUsage md-whiteframe > span, .whiteframedemoDirectiveAttributeUsage div.padded > span {
+      font-size: 0.4em; } }
+  @media (min-width: 600px) and (max-width: 959px) {
+    .whiteframedemoDirectiveAttributeUsage md-whiteframe, .whiteframedemoDirectiveAttributeUsage div.padded {
+      margin: 20px;
+      height: 75px; }
+    .whiteframedemoDirectiveAttributeUsage md-whiteframe > span, .whiteframedemoDirectiveAttributeUsage div.padded > span {
+      font-size: 0.6em; } }
+  @media (min-width: 960px) and (max-width: 1279px) {
+    .whiteframedemoDirectiveAttributeUsage md-whiteframe, .whiteframedemoDirectiveAttributeUsage div.padded {
+      margin: 20px;
+      height: 90px;
+      background-color: #fcddde; }
+    .whiteframedemoDirectiveAttributeUsage md-whiteframe > span, .whiteframedemoDirectiveAttributeUsage div.padded > span {
+      font-size: 0.9em; } }
+  @media (min-width: 1280px) {
+    .whiteframedemoDirectiveAttributeUsage md-whiteframe, .whiteframedemoDirectiveAttributeUsage div.padded {
+      margin: 25px;
+      height: 100px;
+      background-color: #F2FCE2; }
+    .whiteframedemoDirectiveAttributeUsage md-whiteframe > span, .whiteframedemoDirectiveAttributeUsage div.padded > span {
+      font-size: 1.0em; }
+     #lenth{
+       padding-left:500px; padding-right:500px; padding-top: 50px;
+     }
